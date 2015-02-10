@@ -4,7 +4,7 @@ A lightweight grid / list button toggle directive that has to be used with NgInc
 
 ## Settings
 
-Settings can be provided as attributes in the `<sl-page-size-changer>` :
+Settings can be provided as attributes in the `<sl-grid-list-toggle>` :
 
  * `ng-model` (mandatory) : Curent active template. You'll want to use it in your NgInclude source.
 
