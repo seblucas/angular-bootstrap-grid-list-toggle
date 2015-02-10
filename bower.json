@@ -1,0 +1,24 @@
+{
+  "name": "angular-bootstrap-grid-list-toggle",
+  "main": "./grid-list-toggle.js",
+  "version": "0.1.0",
+  "homepage": "http://github.com/seblucas/angular-bootstrap-grid-list-toggle",
+  "author": "Sébastien Lucas",
+  "description": "Angular Bootstrap grid / list toggle directive",
+  "license": "MIT",
+  "ignore": [
+    ".bowerrc",
+    ".gitignore",
+    ".jshintrc",
+    ".hgtags",
+    "bower.json",
+    "README.md"
+  ],
+  "keywords": [
+    "angularjs",
+    "bootstrap"
+  ],
+  "dependencies": {
+     "angular": "1.3.x"
+  }
+}
