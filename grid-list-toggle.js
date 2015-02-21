@@ -26,7 +26,7 @@ angular.module('seblucas.slGridListToggle', [])
         };
 
         scope.isTemplateActive = function(value) {
-          return scope.currentTemplate.indexOf (value) > 0;
+          return scope.currentTemplate.indexOf ('.' + value + '.html') > 0;
         };
       }
     };
