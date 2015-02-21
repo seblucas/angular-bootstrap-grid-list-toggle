@@ -1,5 +1,10 @@
 'use strict';
 
+/*!
+ * angular-bootstrap-grid-list-toggle
+ * https://github.com/seblucas/angular-bootstrap-grid-list-toggle
+ * Copyright (c) 2015 ; Licensed MIT
+ */
 angular.module('seblucas.slGridListToggle', [])
   .directive('slGridListToggle', function() {
     return {
