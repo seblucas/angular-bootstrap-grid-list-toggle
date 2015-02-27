@@ -1,7 +1,7 @@
 {
   "name": "angular-bootstrap-grid-list-toggle",
   "main": "./grid-list-toggle.js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "homepage": "http://github.com/seblucas/angular-bootstrap-grid-list-toggle",
   "author": "Sébastien Lucas",
   "description": "Angular Bootstrap grid / list toggle directive",
