@@ -11,7 +11,8 @@ angular.module('seblucas.slGridListToggle', [])
       restrict: 'E',
       require: '^ngModel',
       scope: {
-        templatePrefix: '='
+        templatePrefix: '=',
+        defaultTemplate: '='
       },
       template:
 '<div class="btn-group btn-group-lg pull-right"> \
@@ -33,6 +34,10 @@ angular.module('seblucas.slGridListToggle', [])
         scope.isTemplateActive = function(value) {
           return scope.currentTemplate.indexOf ('.' + value + '.html') > 0;
         };
+
+        if (attrs.defaultTemplate) {
+          scope.toggleTemplate(scope.defaultTemplate);
+        }
       }
     };
   });
