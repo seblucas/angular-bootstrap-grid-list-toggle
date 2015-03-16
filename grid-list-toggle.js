@@ -12,7 +12,8 @@ angular.module('seblucas.slGridListToggle', [])
       require: '^ngModel',
       scope: {
         templatePrefix: '=',
-        defaultTemplate: '='
+        defaultTemplate: '=',
+        toggleChangeEvent: '='
       },
       template:
 '<div class="btn-group btn-group-lg pull-right"> \
@@ -26,9 +27,23 @@ angular.module('seblucas.slGridListToggle', [])
             scope.currentTemplate = ngModel.$modelValue;
         };
 
+        scope.$watch('defaultTemplate', function(newValue, oldValue, scope) {
+          // If the value change call the event
+          if (oldValue !== newValue) {
+            if (attrs.toggleChangeEvent) {
+              scope.toggleChangeEvent(newValue);
+            }
+          }
+          // If the activetemplate is not the right one, change it
+          if (!scope.isTemplateActive(newValue)) {
+            scope.toggleTemplate(newValue);
+          }
+        });
+
         scope.toggleTemplate = function(value) {
           scope.currentTemplate = scope.templatePrefix + value +'.html';
           ngModel.$setViewValue(scope.currentTemplate);
+          scope.defaultTemplate = value;
         };
 
         scope.isTemplateActive = function(value) {
